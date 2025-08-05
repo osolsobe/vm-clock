@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <setting propertyKey="@Properties.DisplayMode" title="@Strings.DisplayModeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextMode</listEntry>
+            <listEntry value="1">@Strings.SokolnikMode</listEntry>
+        </settingConfig>
+    </setting>
+</settings>

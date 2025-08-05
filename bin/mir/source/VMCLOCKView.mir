@@ -1,0 +1,611 @@
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Application,4,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 6; @symbol_classdef = [VMCLOCKView,6,6,17]; @symbol_extends<0> = [WatchUi,6,26,33]; @symbol_extends<1> = [WatchFace,6,34,43]; ]
+class VMCLOCKView extends WatchUi.WatchFace {
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 6; ]
+    <init> {
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 14 16 ]
+        symbol [ TEXT_MODE %tmp.2 14 41 50 ];
+        %tmp.2 = getv ? :TEXT_MODE;
+        putv self :_displayMode %tmp.2;
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 9; @position = 10; @symbol_constdef = [TEXT_MODE,9,10,19]; ]
+    const TEXT_MODE = 0;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 10; @position = 10; @symbol_constdef = [SOKOLNIK_MODE,10,10,23]; ]
+    const SOKOLNIK_MODE = 1;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 11; @position = 10; @symbol_constdef = [SMALL_SCREEN,11,10,22]; ]
+    const SMALL_SCREEN = 208;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 12; @position = 10; @symbol_constdef = [LARGE_SCREEN,12,10,22]; ]
+    const LARGE_SCREEN = 320;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 14; @position = 16; @symbol_vardef = [_displayMode,14,16,28]; @symbol_type<0> = [Number,14,32,38]; ]
+    private
+    var _displayMode as Number;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 15; @position = 16; @symbol_vardef = [_isAwake,15,16,24]; @symbol_type<0> = [Boolean,15,28,35]; ]
+    private
+    var _isAwake as Boolean = true;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 16; @position = 16; @symbol_vardef = [_screenWidth,16,16,28]; @symbol_type<0> = [Number,16,32,38]; ]
+    private
+    var _screenWidth as Number = 240;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 17; @position = 16; @symbol_vardef = [_sokolnikBitmap,17,16,31]; @symbol_type<0> = [BitmapResource,17,35,49]; ]
+    private
+    var _sokolnikBitmap as BitmapResource or Null = null;
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 19; @symbol_functiondef = [initialize,19,13,23]; ]
+    function initialize() as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_19_26_21_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 20 8 ]
+        symbol [ WatchFace %tmp.2 20 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 20 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_19_26_21_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 24; @symbol_functiondef = [onLayout,24,13,21]; @symbol_param<0> = [dc,24,22,24]; @symbol_param<0>_type<0> = [Dc,24,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_24_40_29_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 25 8 ]
+        %tmp.1 = self;
+        symbol [ setLayout %tmp.2 25 8 17 ];
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        symbol [ Rez %tmp.4 25 18 21 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Layouts %tmp.5 25 22 29 ];
+        %tmp.5 = getv %tmp.4 :Layouts;
+        symbol [ WatchFace %tmp.6 25 30 39 ];
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 25 40 42 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 28 8 ]
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 28 23 25 ];
+        symbol [ getWidth %tmp.10 28 26 34 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        symbol [ _screenWidth ? 28 8 20 ];
+        putv self :_screenWidth %tmp.11;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_24_40_29_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 34; @symbol_functiondef = [onShow,34,13,19]; ]
+    function onShow() as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_34_30_45_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 36 8 ]
+        symbol [ WatchUi %tmp.1 36 26 33 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.2 36 34 46 ];
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        symbol [ Rez %tmp.4 36 47 50 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Drawables %tmp.5 36 51 60 ];
+        %tmp.5 = getv %tmp.4 :Drawables;
+        symbol [ SokolnikImage %tmp.6 36 61 74 ];
+        %tmp.6 = getv %tmp.5 :SokolnikImage;
+        %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+        symbol [ _sokolnikBitmap ? 36 8 23 ];
+        putv self :_sokolnikBitmap %tmp.7;
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 39 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_34_30_45_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_34_30_45_4_stop" ]
+        %mode.1 = local;
+        symbol [ mode %mode.1 39 12 16 ];
+        symbol [ Application %tmp.8 39 19 30 ];
+        %tmp.8 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.9 39 31 41 ];
+        %tmp.9 = getv %tmp.8 :Properties;
+        symbol [ getValue %tmp.10 39 42 50 ];
+        %tmp.10 = getv function %tmp.9 :getValue;
+        %tmp.11 = "DisplayMode";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        lputv %mode.1 %tmp.12;
+        symbol [ mode %mode.1 39 12 16 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 40 8 ]
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_stmt:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_12_40_44_begin:
+        %tmp.13 = lgetv %mode.1;
+        symbol [ mode %tmp.13 40 12 16 ];
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_else_false;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_28_40_44_true:
+        %tmp.16 = lgetv %mode.1;
+        symbol [ mode %tmp.16 40 28 32 ];
+        %tmp.17 = as %tmp.16 { (!Null) };
+        symbol [ Number %tmp.19 40 44 50 ];
+        %tmp.19 = getv ? :Number;
+        %tmp.20 = isa %tmp.17 %tmp.19;
+        push %tmp.20;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_28_40_44_end:
+        %tmp.21 = phi [%tmp.15 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_12_40_44_begin] [%tmp.20 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_28_40_44_true] [%tmp.21 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_28_40_44_end];
+        bf %tmp.21 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_else_false;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_true:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_52_42_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 41 12 ]
+        %tmp.22 = lgetv %mode.1;
+        symbol [ mode %tmp.22 41 27 31 ];
+        %tmp.23 = as %tmp.22 { (Number) && (!Null) };
+        %tmp.24 = as %tmp.23 Number;
+        symbol [ Number %tmp.24 41 35 41 ];
+        symbol [ _displayMode ? 41 12 24 ];
+        putv self :_displayMode %tmp.24;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_52_42_8_stop:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_else_false:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_42_15_44_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 43 12 ]
+        symbol [ TEXT_MODE %tmp.26 43 27 36 ];
+        %tmp.26 = getv ? :TEXT_MODE;
+        symbol [ _displayMode ? 43 12 24 ];
+        putv self :_displayMode %tmp.26;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_42_15_44_8_stop:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_40_8_44_8_if_end:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_34_30_45_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 48; @symbol_functiondef = [onUpdate,48,13,21]; @symbol_param<0> = [dc,48,22,24]; @symbol_param<0>_type<0> = [Dc,48,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_48_40_67_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 50 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 50 8 10 ];
+        symbol [ setColor %tmp.2 50 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 50 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 50 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 50 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 50 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 51 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 51 8 10 ];
+        symbol [ clear %tmp.8 51 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 54 8 ]
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_stmt:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_12_54_41_begin:
+        symbol [ _isAwake %tmp.10 54 13 21 ];
+        %tmp.10 = getv ? :_isAwake;
+        %tmp.11 = not %tmp.10;
+        bf %tmp.11 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_25_54_41_true:
+        symbol [ _displayMode %tmp.13 54 25 37 ];
+        %tmp.13 = getv ? :_displayMode;
+        symbol [ SOKOLNIK_MODE %tmp.15 54 41 54 ];
+        %tmp.15 = getv ? :SOKOLNIK_MODE;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        push %tmp.16;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_25_54_41_end:
+        %tmp.17 = phi [%tmp.11 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_12_54_41_begin] [%tmp.16 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_25_54_41_true] [%tmp.17 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_25_54_41_end];
+        bf %tmp.17 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_true:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_56_57_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 55 12 ]
+        %tmp.18 = self;
+        symbol [ drawSimpleTimeOnly %tmp.19 55 12 30 ];
+        %tmp.19 = getv function %tmp.18 :drawSimpleTimeOnly;
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 55 31 33 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 56 12 ]
+        ret ?;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_56_57_8_stop:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_54_8_57_8_if_end:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 59 8 ]
+        symbol [ _displayMode %tmp.22 59 16 28 ];
+        %tmp.22 = getv ? :_displayMode;
+        push %tmp.22;
+        switch %tmp.22 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtEnd;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtBegin:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 60 12 ]
+        %tmp.23 = dup %tmp.22;
+        symbol [ TEXT_MODE %tmp.25 60 17 26 ];
+        %tmp.25 = getv ? :TEXT_MODE;
+        %tmp.26 = getv function %tmp.23 :equals;
+        %tmp.27 = invoke %tmp.23 %tmp.26 (%tmp.25);
+        bt %tmp.27 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_60_12_62_21_switchCase;
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 63 12 ]
+        %tmp.28 = dup %tmp.22;
+        symbol [ SOKOLNIK_MODE %tmp.30 63 17 30 ];
+        %tmp.30 = getv ? :SOKOLNIK_MODE;
+        %tmp.31 = getv function %tmp.28 :equals;
+        %tmp.32 = invoke %tmp.28 %tmp.31 (%tmp.30);
+        bt %tmp.32 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_63_12_65_21_switchCase;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtDefault:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_defaultCodeBegin;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_60_12_62_21_switchCase:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 61 16 ]
+        %tmp.33 = self;
+        symbol [ drawTextMode %tmp.34 61 16 28 ];
+        %tmp.34 = getv function %tmp.33 :drawTextMode;
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 61 29 31 ];
+        invoke %tmp.33 %tmp.34(%tmp.35);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 62 16 ]
+        goto break @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtEnd;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_63_12_65_21_switchCase:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 64 16 ]
+        %tmp.36 = self;
+        symbol [ drawImageMode %tmp.37 64 16 29 ];
+        %tmp.37 = getv function %tmp.36 :drawImageMode;
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 64 30 32 ];
+        invoke %tmp.36 %tmp.37(%tmp.38);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 65 16 ]
+        goto break @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtEnd;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_defaultCodeBegin:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_59_8_66_8_switchStmtEnd:
+        pop;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_48_40_67_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 72; @symbol_functiondef = [drawSimpleTimeOnly,72,13,31]; @symbol_param<0> = [dc,72,32,34]; @symbol_param<0>_type<0> = [Dc,72,38,40]; ]
+    function drawSimpleTimeOnly(dc as Dc) as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 73 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_stop" ]
+        %centerX.1 = local;
+        symbol [ centerX %centerX.1 73 12 19 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 73 22 24 ];
+        symbol [ getWidth %tmp.2 73 25 33 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %centerX.1 %tmp.5;
+        symbol [ centerX %centerX.1 73 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 74 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_stop" ]
+        %centerY.2 = local;
+        symbol [ centerY %centerY.2 74 12 19 ];
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 74 22 24 ];
+        symbol [ getHeight %tmp.7 74 25 34 ];
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %centerY.2 %tmp.10;
+        symbol [ centerY %centerY.2 74 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 76 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_stop" ]
+        %customText.3 = local;
+        symbol [ customText %customText.3 76 12 22 ];
+        %tmp.11 = "Bezčasí";
+        lputv %customText.3 %tmp.11;
+        symbol [ customText %customText.3 76 12 22 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 77 8 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 77 8 10 ];
+        symbol [ setColor %tmp.13 77 11 19 ];
+        %tmp.13 = getv function %tmp.12 :setColor;
+        symbol [ Graphics %tmp.14 77 20 28 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.15 77 29 40 ];
+        %tmp.15 = getv %tmp.14 :COLOR_WHITE;
+        symbol [ Graphics %tmp.16 77 42 50 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.17 77 51 68 ];
+        %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
+        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 78 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 78 8 10 ];
+        symbol [ drawText %tmp.19 78 11 19 ];
+        %tmp.19 = getv function %tmp.18 :drawText;
+        %tmp.20 = lgetv %centerX.1;
+        symbol [ centerX %tmp.20 78 20 27 ];
+        %tmp.21 = lgetv %centerY.2;
+        symbol [ centerY %tmp.21 78 29 36 ];
+        symbol [ Graphics %tmp.22 78 38 46 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.23 78 47 58 ];
+        %tmp.23 = getv %tmp.22 :FONT_MEDIUM;
+        %tmp.24 = lgetv %customText.3;
+        symbol [ customText %tmp.24 78 60 70 ];
+        symbol [ Graphics %tmp.25 78 72 80 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.26 78 81 100 ];
+        %tmp.26 = getv %tmp.25 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.23, %tmp.24, %tmp.26);
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_72_50_79_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 84; @symbol_functiondef = [drawTextMode,84,13,25]; @symbol_param<0> = [dc,84,26,28]; @symbol_param<0>_type<0> = [Dc,84,32,34]; ]
+    function drawTextMode(dc as Dc) as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 85 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_stop" ]
+        %centerX.1 = local;
+        symbol [ centerX %centerX.1 85 12 19 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 85 22 24 ];
+        symbol [ getWidth %tmp.2 85 25 33 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %centerX.1 %tmp.5;
+        symbol [ centerX %centerX.1 85 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 86 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_stop" ]
+        %centerY.2 = local;
+        symbol [ centerY %centerY.2 86 12 19 ];
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 86 22 24 ];
+        symbol [ getHeight %tmp.7 86 25 34 ];
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %centerY.2 %tmp.10;
+        symbol [ centerY %centerY.2 86 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 89 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_stop" ]
+        %fontSize.3 = local;
+        symbol [ fontSize %fontSize.3 89 12 20 ];
+        symbol [ Graphics %tmp.11 89 23 31 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.12 89 32 43 ];
+        %tmp.12 = getv %tmp.11 :FONT_MEDIUM;
+        lputv %fontSize.3 %tmp.12;
+        symbol [ fontSize %fontSize.3 89 12 20 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 90 8 ]
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_stmt:
+        symbol [ _screenWidth %tmp.14 90 12 24 ];
+        %tmp.14 = getv ? :_screenWidth;
+        symbol [ SMALL_SCREEN %tmp.16 90 28 40 ];
+        %tmp.16 = getv ? :SMALL_SCREEN;
+        %tmp.17 = lte %tmp.14 %tmp.16;
+        bf %tmp.17 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_false;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_true:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_42_92_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 91 12 ]
+        symbol [ Graphics %tmp.18 91 23 31 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.19 91 32 42 ];
+        %tmp.19 = getv %tmp.18 :FONT_SMALL;
+        lputv %fontSize.3 %tmp.19;
+        symbol [ fontSize %fontSize.3 91 12 20 ];
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_42_92_8_stop:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_false:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 92 15 ]
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_15_94_8_if_stmt:
+        symbol [ _screenWidth %tmp.21 92 19 31 ];
+        %tmp.21 = getv ? :_screenWidth;
+        symbol [ LARGE_SCREEN %tmp.23 92 35 47 ];
+        %tmp.23 = getv ? :LARGE_SCREEN;
+        %tmp.24 = gte %tmp.21 %tmp.23;
+        bf %tmp.24 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_15_94_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_15_94_8_if_true:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_49_94_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 93 12 ]
+        symbol [ Graphics %tmp.25 93 23 31 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.26 93 32 42 ];
+        %tmp.26 = getv %tmp.25 :FONT_LARGE;
+        lputv %fontSize.3 %tmp.26;
+        symbol [ fontSize %fontSize.3 93 12 20 ];
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_49_94_8_stop:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_15_94_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_92_15_94_8_if_end:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_90_8_94_8_if_end:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 97 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_stop" ]
+        %customText.4 = local;
+        symbol [ customText %customText.4 97 12 22 ];
+        %tmp.27 = "Je čas na bezčasí";
+        lputv %customText.4 %tmp.27;
+        symbol [ customText %customText.4 97 12 22 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 98 8 ]
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 98 8 10 ];
+        symbol [ setColor %tmp.29 98 11 19 ];
+        %tmp.29 = getv function %tmp.28 :setColor;
+        symbol [ Graphics %tmp.30 98 20 28 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.31 98 29 40 ];
+        %tmp.31 = getv %tmp.30 :COLOR_WHITE;
+        symbol [ Graphics %tmp.32 98 42 50 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.33 98 51 68 ];
+        %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
+        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 99 8 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 99 8 10 ];
+        symbol [ drawText %tmp.35 99 11 19 ];
+        %tmp.35 = getv function %tmp.34 :drawText;
+        %tmp.36 = lgetv %centerX.1;
+        symbol [ centerX %tmp.36 99 20 27 ];
+        %tmp.37 = lgetv %centerY.2;
+        symbol [ centerY %tmp.37 99 29 36 ];
+        %tmp.38 = lgetv %fontSize.3;
+        symbol [ fontSize %tmp.38 99 38 46 ];
+        %tmp.39 = lgetv %customText.4;
+        symbol [ customText %tmp.39 99 48 58 ];
+        symbol [ Graphics %tmp.40 99 60 68 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 99 69 88 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38, %tmp.39, %tmp.41);
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_84_44_100_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 105; @symbol_functiondef = [drawImageMode,105,13,26]; @symbol_param<0> = [dc,105,27,29]; @symbol_param<0>_type<0> = [Dc,105,33,35]; ]
+    function drawImageMode(dc as Dc) as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 106 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_stop" ]
+        %centerX.1 = local;
+        symbol [ centerX %centerX.1 106 12 19 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 106 22 24 ];
+        symbol [ getWidth %tmp.2 106 25 33 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %centerX.1 %tmp.5;
+        symbol [ centerX %centerX.1 106 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 107 8 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_stop" ]
+        %centerY.2 = local;
+        symbol [ centerY %centerY.2 107 12 19 ];
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 107 22 24 ];
+        symbol [ getHeight %tmp.7 107 25 34 ];
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %centerY.2 %tmp.10;
+        symbol [ centerY %centerY.2 107 12 19 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 110 8 ]
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_stmt:
+        symbol [ _sokolnikBitmap %tmp.12 110 12 27 ];
+        %tmp.12 = getv ? :_sokolnikBitmap;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_else_false;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_true:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 112 12 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_stop" ]
+        %bitmapWidth.3 = local;
+        symbol [ bitmapWidth %bitmapWidth.3 112 16 27 ];
+        symbol [ _sokolnikBitmap %tmp.16 112 30 45 ];
+        %tmp.16 = getv ? :_sokolnikBitmap;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        symbol [ getWidth %tmp.18 112 46 54 ];
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        lputv %bitmapWidth.3 %tmp.19;
+        symbol [ bitmapWidth %bitmapWidth.3 112 16 27 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 113 12 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_stop" ]
+        %bitmapHeight.4 = local;
+        symbol [ bitmapHeight %bitmapHeight.4 113 16 28 ];
+        symbol [ _sokolnikBitmap %tmp.21 113 31 46 ];
+        %tmp.21 = getv ? :_sokolnikBitmap;
+        symbol [ getHeight %tmp.22 113 47 56 ];
+        %tmp.22 = getv function %tmp.21 :getHeight;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %bitmapHeight.4 %tmp.23;
+        symbol [ bitmapHeight %bitmapHeight.4 113 16 28 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 116 12 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_stop" ]
+        %x.5 = local;
+        symbol [ x %x.5 116 16 17 ];
+        %tmp.24 = lgetv %centerX.1;
+        symbol [ centerX %tmp.24 116 20 27 ];
+        %tmp.25 = lgetv %bitmapWidth.3;
+        symbol [ bitmapWidth %tmp.25 116 31 42 ];
+        %tmp.26 = 2;
+        %tmp.27 = div %tmp.25 %tmp.26;
+        %tmp.28 = sub %tmp.24 %tmp.27;
+        lputv %x.5 %tmp.28;
+        symbol [ x %x.5 116 16 17 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 117 12 ]
+        [ "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_start" "_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_stop" ]
+        %y.6 = local;
+        symbol [ y %y.6 117 16 17 ];
+        %tmp.29 = lgetv %centerY.2;
+        symbol [ centerY %tmp.29 117 20 27 ];
+        %tmp.30 = lgetv %bitmapHeight.4;
+        symbol [ bitmapHeight %tmp.30 117 31 43 ];
+        %tmp.31 = 2;
+        %tmp.32 = div %tmp.30 %tmp.31;
+        %tmp.33 = sub %tmp.29 %tmp.32;
+        lputv %y.6 %tmp.33;
+        symbol [ y %y.6 117 16 17 ];
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 120 12 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 120 12 14 ];
+        symbol [ drawBitmap %tmp.35 120 15 25 ];
+        %tmp.35 = getv function %tmp.34 :drawBitmap;
+        %tmp.36 = lgetv %x.5;
+        symbol [ x %tmp.36 120 26 27 ];
+        %tmp.37 = lgetv %y.6;
+        symbol [ y %tmp.37 120 29 30 ];
+        symbol [ _sokolnikBitmap %tmp.39 120 32 47 ];
+        %tmp.39 = getv ? :_sokolnikBitmap;
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.39);
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_37_121_8_stop:
+        goto @_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_end;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_else_false:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_121_15_125_8_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 123 12 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 123 12 14 ];
+        symbol [ setColor %tmp.41 123 15 23 ];
+        %tmp.41 = getv function %tmp.40 :setColor;
+        symbol [ Graphics %tmp.42 123 24 32 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.43 123 33 44 ];
+        %tmp.43 = getv %tmp.42 :COLOR_WHITE;
+        symbol [ Graphics %tmp.44 123 46 54 ];
+        %tmp.44 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.45 123 55 72 ];
+        %tmp.45 = getv %tmp.44 :COLOR_TRANSPARENT;
+        invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45);
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 124 12 ]
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 124 12 14 ];
+        symbol [ drawText %tmp.47 124 15 23 ];
+        %tmp.47 = getv function %tmp.46 :drawText;
+        %tmp.48 = lgetv %centerX.1;
+        symbol [ centerX %tmp.48 124 24 31 ];
+        %tmp.49 = lgetv %centerY.2;
+        symbol [ centerY %tmp.49 124 33 40 ];
+        symbol [ Graphics %tmp.50 124 42 50 ];
+        %tmp.50 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.51 124 51 62 ];
+        %tmp.51 = getv %tmp.50 :FONT_MEDIUM;
+        %tmp.52 = "Sokolník";
+        symbol [ Graphics %tmp.53 124 76 84 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.54 124 85 104 ];
+        %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.51, %tmp.52, %tmp.54);
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_121_15_125_8_stop:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_110_8_125_8_if_end:
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_105_45_126_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 131; @symbol_functiondef = [onHide,131,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 135; @symbol_functiondef = [onExitSleep,135,13,24]; ]
+    function onExitSleep() as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_135_35_137_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 136 8 ]
+        %tmp.1 = true;
+        symbol [ _isAwake ? 136 8 16 ];
+        putv self :_isAwake %tmp.1;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_135_35_137_4_stop:
+    }
+    [ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 140; @symbol_functiondef = [onEnterSleep,140,13,25]; ]
+    function onEnterSleep() as Void {
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_140_36_142_4_start:
+[ "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" 141 8 ]
+        %tmp.1 = false;
+        symbol [ _isAwake ? 141 8 16 ];
+        putv self :_isAwake %tmp.1;
+_Users_janosolsobe_Documents_Wm_VMCLOCK_source_VMCLOCKView_mc_140_36_142_4_stop:
+    }
+}
+[ @file = "/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc"; @line = 1; ]
+<init> {
+}

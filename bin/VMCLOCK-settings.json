@@ -1,0 +1,33 @@
+{
+  "settings" : [ {
+    "key" : "DisplayMode",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "DisplayModeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "TextMode",
+      "value" : 0
+    }, {
+      "display" : "SokolnikMode",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "DisplayModeTitle" : "Režim zobrazení",
+      "TextMode" : "Text - Bezčasí",
+      "SokolnikMode" : "Sokolník",
+      "AppName" : "VM Clock"
+    }
+  }
+}

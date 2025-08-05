@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="1" lineNum="11" parent="globals/VMCLOCKApp" pc="268435457" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="2" lineNum="32" parent="globals" pc="268435476" symbol="getApp"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="2" lineNum="33" parent="globals" pc="268435486" symbol="getApp"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/gen/006-B3888-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435502" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="4" lineNum="6" parent="globals/VMCLOCKView" pc="268435526" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="6" lineNum="26" parent="globals/VMCLOCKApp" pc="268435545" symbol="getInitialView"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="6" lineNum="27" parent="globals/VMCLOCKApp" pc="268435547" symbol="getInitialView"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="7" lineNum="13" parent="globals/VMCLOCKApp" pc="268435584" symbol="initialize"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKApp.mc" id="7" lineNum="14" parent="globals/VMCLOCKApp" pc="268435586" symbol="initialize"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="9" lineNum="135" parent="globals/VMCLOCKView" pc="268435605" symbol="onExitSleep"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="9" lineNum="136" parent="globals/VMCLOCKView" pc="268435607" symbol="onExitSleep"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="34" parent="globals/VMCLOCKView" pc="268435618" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="36" parent="globals/VMCLOCKView" pc="268435622" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="39" parent="globals/VMCLOCKView" pc="268435669" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="40" parent="globals/VMCLOCKView" pc="268435691" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="41" parent="globals/VMCLOCKView" pc="268435716" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="10" lineNum="43" parent="globals/VMCLOCKView" pc="268435727" symbol="onShow"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="11" lineNum="24" parent="globals/VMCLOCKView" pc="268435741" symbol="onLayout"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="11" lineNum="25" parent="globals/VMCLOCKView" pc="268435743" symbol="onLayout"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="11" lineNum="28" parent="globals/VMCLOCKView" pc="268435784" symbol="onLayout"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="84" parent="globals/VMCLOCKView" pc="268435804" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="85" parent="globals/VMCLOCKView" pc="268435808" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="86" parent="globals/VMCLOCKView" pc="268435827" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="89" parent="globals/VMCLOCKView" pc="268435846" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="90" parent="globals/VMCLOCKView" pc="268435853" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="91" parent="globals/VMCLOCKView" pc="268435870" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="92" parent="globals/VMCLOCKView" pc="268435880" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="93" parent="globals/VMCLOCKView" pc="268435897" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="97" parent="globals/VMCLOCKView" pc="268435904" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="98" parent="globals/VMCLOCKView" pc="268435911" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="12" lineNum="99" parent="globals/VMCLOCKView" pc="268435933" symbol="drawTextMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="72" parent="globals/VMCLOCKView" pc="268435959" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="73" parent="globals/VMCLOCKView" pc="268435963" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="74" parent="globals/VMCLOCKView" pc="268435982" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="76" parent="globals/VMCLOCKView" pc="268436001" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="77" parent="globals/VMCLOCKView" pc="268436008" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="13" lineNum="78" parent="globals/VMCLOCKView" pc="268436030" symbol="drawSimpleTimeOnly"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="105" parent="globals/VMCLOCKView" pc="268436059" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="106" parent="globals/VMCLOCKView" pc="268436063" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="107" parent="globals/VMCLOCKView" pc="268436082" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="110" parent="globals/VMCLOCKView" pc="268436101" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="112" parent="globals/VMCLOCKView" pc="268436114" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="113" parent="globals/VMCLOCKView" pc="268436133" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="116" parent="globals/VMCLOCKView" pc="268436152" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="117" parent="globals/VMCLOCKView" pc="268436165" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="120" parent="globals/VMCLOCKView" pc="268436178" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="123" parent="globals/VMCLOCKView" pc="268436203" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="14" lineNum="124" parent="globals/VMCLOCKView" pc="268436225" symbol="drawImageMode"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="15" lineNum="140" parent="globals/VMCLOCKView" pc="268436257" symbol="onEnterSleep"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="15" lineNum="141" parent="globals/VMCLOCKView" pc="268436259" symbol="onEnterSleep"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="16" lineNum="19" parent="globals/VMCLOCKView" pc="268436270" symbol="initialize"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="16" lineNum="20" parent="globals/VMCLOCKView" pc="268436272" symbol="initialize"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="48" parent="globals/VMCLOCKView" pc="268436291" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="50" parent="globals/VMCLOCKView" pc="268436293" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="51" parent="globals/VMCLOCKView" pc="268436315" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="54" parent="globals/VMCLOCKView" pc="268436327" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="55" parent="globals/VMCLOCKView" pc="268436356" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="56" parent="globals/VMCLOCKView" pc="268436370" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="59" parent="globals/VMCLOCKView" pc="268436371" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="60" parent="globals/VMCLOCKView" pc="268436379" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="63" parent="globals/VMCLOCKView" pc="268436399" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="61" parent="globals/VMCLOCKView" pc="268436422" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="62" parent="globals/VMCLOCKView" pc="268436436" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="64" parent="globals/VMCLOCKView" pc="268436439" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/VMCLOCKView.mc" id="18" lineNum="65" parent="globals/VMCLOCKView" pc="268436453" symbol="onUpdate"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/gen/006-B3888-00/source/Rez.mcgen" id="19" lineNum="14" parent="globals/Rez/Layouts" pc="268436458" symbol="WatchFace"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/gen/006-B3888-00/source/Rez.mcgen" id="19" lineNum="15" parent="globals/Rez/Layouts" pc="268436470" symbol="WatchFace"/>
+        <entry filename="/Users/janosolsobe/Documents/Wm/VMCLOCK/source/gen/006-B3888-00/source/Rez.mcgen" id="19" lineNum="17" parent="globals/Rez/Layouts" pc="268436605" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="17" symbol="SokolnikImage"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="7" object="true" symbol="VMCLOCKView"/>
+        <entry id="14" method="true" symbol="drawSimpleTimeOnly"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="18" symbol="AppName"/>
+        <entry field="true" id="11" symbol="&lt;globals/VMCLOCKView/&lt;&gt;_screenWidth&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="13" method="true" symbol="drawImageMode"/>
+        <entry field="true" id="9" symbol="&lt;globals/VMCLOCKView/&lt;&gt;_displayMode&gt;"/>
+        <entry field="true" id="20" symbol="SokolnikMode"/>
+        <entry field="true" id="10" symbol="&lt;globals/VMCLOCKView/&lt;&gt;_isAwake&gt;"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="12" symbol="&lt;globals/VMCLOCKView/&lt;&gt;_sokolnikBitmap&gt;"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="16" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="6" object="true" symbol="VMCLOCKApp"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="15" method="true" symbol="drawTextMode"/>
+        <entry id="8" module="true" symbol="Layouts"/>
+        <entry field="true" id="19" symbol="DisplayModeTitle"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="21" symbol="TextMode"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435739" name="mode" stackId="1" startPc="268435622"/>
+        <entry arg="true" endPc="268435803" name="dc" stackId="1" startPc="268435741"/>
+        <entry arg="true" endPc="268435958" name="dc" stackId="1" startPc="268435804"/>
+        <entry endPc="268435957" name="centerX" stackId="2" startPc="268435808"/>
+        <entry endPc="268435957" name="centerY" stackId="3" startPc="268435808"/>
+        <entry endPc="268435957" name="fontSize" stackId="4" startPc="268435808"/>
+        <entry endPc="268435957" name="customText" stackId="5" startPc="268435808"/>
+        <entry arg="true" endPc="268436058" name="dc" stackId="1" startPc="268435959"/>
+        <entry endPc="268436057" name="centerX" stackId="2" startPc="268435963"/>
+        <entry endPc="268436057" name="centerY" stackId="3" startPc="268435963"/>
+        <entry endPc="268436057" name="customText" stackId="4" startPc="268435963"/>
+        <entry arg="true" endPc="268436256" name="dc" stackId="1" startPc="268436059"/>
+        <entry endPc="268436255" name="centerX" stackId="2" startPc="268436063"/>
+        <entry endPc="268436255" name="centerY" stackId="3" startPc="268436063"/>
+        <entry endPc="268436201" name="bitmapWidth" stackId="4" startPc="268436114"/>
+        <entry endPc="268436201" name="bitmapHeight" stackId="5" startPc="268436114"/>
+        <entry endPc="268436201" name="x" stackId="6" startPc="268436114"/>
+        <entry endPc="268436201" name="y" stackId="7" startPc="268436114"/>
+        <entry arg="true" endPc="268436457" name="dc" stackId="1" startPc="268436291"/>
+        <entry arg="true" endPc="268436621" name="dc" stackId="1" startPc="268436458"/>
+    </localVars>
+    <deviceInfo deviceVersion="c3c85f7bae6fb4aafa9acce2937cf0e1d7b137f1" partNumber="006-B3888-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DisplayModeTitle"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="SokolnikImage"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TextMode"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SokolnikMode"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="63" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/VMCLOCKApp" offset="134" parentId="globals" symbolId="VMCLOCKApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="205" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/VMCLOCKView" offset="260" parentId="globals" symbolId="VMCLOCKView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="411" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="458" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="497" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435475" name="&lt;init&gt;" parent="VMCLOCKApp" startPc="268435457">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435501" name="getApp" startPc="268435476">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435525" name="&lt;init&gt;" parent="Rez" startPc="268435502">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435544" name="&lt;init&gt;" parent="VMCLOCKView" startPc="268435526">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="VMCLOCKApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435583" name="getInitialView" parent="VMCLOCKApp" startPc="268435545">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435604" name="initialize" parent="VMCLOCKApp" startPc="268435584">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="VMCLOCKApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435617" name="onExitSleep" parent="VMCLOCKView" startPc="268435605">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435740" name="onShow" parent="VMCLOCKView" startPc="268435618">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435803" name="onLayout" parent="VMCLOCKView" startPc="268435741">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435958" name="drawTextMode" parent="VMCLOCKView" startPc="268435804">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436058" name="drawSimpleTimeOnly" parent="VMCLOCKView" startPc="268435959">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436256" name="drawImageMode" parent="VMCLOCKView" startPc="268436059">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436269" name="onEnterSleep" parent="VMCLOCKView" startPc="268436257">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436290" name="initialize" parent="VMCLOCKView" startPc="268436270">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="VMCLOCKView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436457" name="onUpdate" parent="VMCLOCKView" startPc="268436291">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436621" name="WatchFace" parent="Layouts" startPc="268436458">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

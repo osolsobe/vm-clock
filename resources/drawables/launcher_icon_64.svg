@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Univerzální launcher icon pro všechna Garmin zařízení -->
+  <!-- Optimalizováno pro škálování 62px-90px -->
+  
+  <!-- Černé pozadí -->
+  <rect width="96" height="96" fill="#000000"/>
+  
+  <!-- Hlavní text "VM" - dobře čitelný ve všech velikostech -->
+  <text x="48" y="58" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="#FFFFFF">VM</text>
+  
+  <!-- Dekorativní prvky - jednoduché pro dobrou škálovatelnost -->
+  <circle cx="48" cy="24" r="6" fill="#FFFFFF"/>
+  <circle cx="48" cy="78" r="3" fill="#FFFFFF"/>
+  
+  <!-- Jemný rámeček pro lepší definici -->
+  <rect x="2" y="2" width="92" height="92" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+</svg>

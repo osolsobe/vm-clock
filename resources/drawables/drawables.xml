@@ -1,0 +1,22 @@
+<drawables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <!-- Univerzální launcher icon - automaticky se škáluje pro všechna zařízení -->
+    <bitmap id="LauncherIcon" filename="launcher_icon_64.svg" dithering="none">
+        <!-- Optimalizace pro monochromatické displeje -->
+        <palette>
+            <color>000000</color>
+            <color>FFFFFF</color>
+        </palette>
+    </bitmap>
+    
+    <!-- Alternativní definice s explicitními velikostmi pro různá zařízení -->
+    <!--
+    <bitmap-factory id="LauncherIcon">
+        <bitmap filename="launcher_icon_64.svg" width="64" height="64" />
+        <bitmap filename="launcher_icon_80.svg" width="80" height="80" />
+        <bitmap filename="launcher_icon_90.svg" width="90" height="90" />
+    </bitmap-factory>
+    -->
+    
+    <!-- Hlavní obrázek sokolníka pro watchface -->
+    <bitmap id="SokolnikImage" filename="sokolnik180.svg" dithering="none" />
+</drawables>
